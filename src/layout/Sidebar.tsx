@@ -64,9 +64,14 @@ const Sidebar = () => {
             </div>
             {!isCollapsed && (
               <div className="flex flex-col whitespace-nowrap">
-                <span className="text-sm font-bold tracking-tight text-slate-900">
-                  FinanceHub
-                </span>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-sm font-bold tracking-tight text-slate-900">
+                    FinanceHub
+                  </span>
+                  <span className="text-[9px] font-bold uppercase tracking-wider bg-amber-100 text-amber-700 px-1 py-0.2 rounded border border-amber-200">
+                    MOCK
+                  </span>
+                </div>
                 <span className="text-[10px] font-medium uppercase text-slate-500">
                   Budget Tracker
                 </span>

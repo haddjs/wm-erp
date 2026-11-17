@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { useAuth } from "@/context/AuthContext";
+import { AlertTriangle } from "lucide-react";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -38,7 +39,18 @@ export default function LoginForm() {
           </p>
         </div>
 
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
+        {/* Demo / Mock Notice */}
+        <div className="rounded-xl bg-amber-50 border border-amber-200/80 p-3.5 text-xs text-amber-900 space-y-1.5">
+          <div className="flex items-center gap-1.5 font-bold text-amber-800">
+            <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
+            <span>Demo & Mock Environment</span>
+          </div>
+          <p className="text-[11px] text-amber-700 leading-relaxed">
+            This application is a demonstration prototype created solely to showcase ERP procurement workflows. All data, users, financial records, and company terms are completely fictional and do not represent any real entity or confidential information.
+          </p>
+        </div>
+
+        <form className="mt-6 space-y-6" onSubmit={handleSubmit}>
           {error && (
             <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
               {error}

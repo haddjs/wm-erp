@@ -1,5 +1,12 @@
 # WM ERP — Enterprise Procurement & Financial Management System
 
+> [!WARNING]
+> ### ⚠️ DEMONSTRATION & MOCK SYSTEM NOTICE
+> **This repository is strictly a mock / demonstration prototype.**
+> * **No Real-World Data**: All users, email addresses, financial figures, transaction records, branch entities, invoices, and catalog items contained herein are entirely simulated and randomly generated.
+> * **No Confidential Information**: Nothing in this project represents, derives from, or discloses any actual proprietary company data, confidential financial statements, trade secrets, or actual vendor terms.
+> * **Sole Purpose**: This project is built solely to demonstrate the architecture, user experience, role-based authorization, and end-to-end workflow of an ERP procurement and budgeting platform.
+
 A modern, enterprise-grade **Finance, Budgeting, and Procurement ERP** tailored for multi-branch organizations. The system manages the complete operational lifecycle—from budget requests (RAB — *Rencana Anggaran Biaya*) and multi-tier approvals to purchase execution, invoice auditing, direct expense tracking, and e-commerce reconciliation.
 
 This repository features a **zero-dependency, in-memory mock backend architecture**: all data mutations, role switching, file uploads, and cross-entity relations are simulated client-side with realistic network latency, making it immediately runnable out-of-the-box.

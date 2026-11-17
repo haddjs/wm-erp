@@ -69,6 +69,26 @@ export default function HowToUsePage() {
         <div className="absolute right-0 bottom-0 translate-x-10 translate-y-10 w-80 h-80 rounded-full bg-white/10 blur-2xl pointer-events-none" />
       </div>
 
+      {/* Disclaimer / Mock Notice Card */}
+      <div className="rounded-2xl border border-amber-300/80 dark:border-amber-800/80 bg-amber-50/70 dark:bg-amber-950/30 p-5 text-amber-900 dark:text-amber-200 shadow-xs flex flex-col sm:flex-row items-start gap-4">
+        <div className="p-2.5 rounded-xl bg-amber-100 dark:bg-amber-900/60 text-amber-700 dark:text-amber-300 shrink-0">
+          <AlertTriangle className="w-5 h-5" />
+        </div>
+        <div className="space-y-1 text-xs leading-relaxed">
+          <div className="flex items-center gap-2">
+            <span className="font-bold text-sm text-amber-900 dark:text-amber-100">
+              Important Notice: Demonstration & Mock Environment
+            </span>
+          </div>
+          <p className="text-amber-800/90 dark:text-amber-300/90">
+            This web application is strictly an interactive mock prototype. All data, user accounts, branches, transaction amounts, invoices, and organizational terms displayed within this system are 100% fictional and simulated.
+          </p>
+          <p className="text-amber-700/80 dark:text-amber-400/80 text-[11px]">
+            This system does not represent any actual company, real-world financials, or confidential records. Its sole purpose is to demonstrate the UI/UX, role permissions, and operational flow of an enterprise procurement system.
+          </p>
+        </div>
+      </div>
+
       {/* Navigation Tabs */}
       <div className="flex border-b border-slate-200 dark:border-zinc-800 space-x-2 md:space-x-4 overflow-x-auto pb-1">
         <button
