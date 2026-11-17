@@ -12,4 +12,5 @@ export const ROUTE_ROLES: Record<string, UserRole[]> = {
   "/logs": [1, 2, 3],
   "/users": [1],
   "/shopee": [1],
+  "/how-to-use": [1, 2, 3],
 };

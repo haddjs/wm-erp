@@ -11,6 +11,7 @@ import {
   Tag,
   Users,
   ShoppingCart,
+  BookOpen,
 } from "lucide-react";
 
 export interface SidebarItem {
@@ -47,4 +48,5 @@ export const SIDEBAR_ITEMS: SidebarItem[] = [
   },
   { icon: Clock, label: "Activity Log", path: "/logs", roles: [1, 2, 3] },
   { icon: ShoppingCart, label: "Shopee", path: "/shopee", roles: [1] },
+  { icon: BookOpen, label: "How to Use", path: "/how-to-use", roles: [1, 2, 3] },
 ];
