@@ -135,7 +135,7 @@ function ImportResultView({ result }: { result: ShopeeImportResult }) {
                   #{rec.order_id}
                 </td>
                 <td className="px-4 py-3 text-sm text-right font-mono text-slate-700 dark:text-zinc-300">
-                  {formatIDR(rec.total_amount)}
+                  {rec.total_amount}
                 </td>
                 <td className="px-4 py-3 text-sm text-right font-mono text-slate-700 dark:text-zinc-300">
                   {formatIDR(rec.total_nominal)}
@@ -193,9 +193,9 @@ export default function ShopeePage() {
 
   useEffect(() => {
     if (user && user.role === ROLES.FINANCE) {
-      router.replace("/dashboard");
+      router.replace("/");
     }
-  }, [user]);
+  }, [user, router]);
 
   if (user?.role === ROLES.FINANCE) return null;
 

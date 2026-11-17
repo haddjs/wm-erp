@@ -111,10 +111,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const switchRole = async (role: UserRole) => {
-    const res = await switchMockRole(role);
+    const targetRole = Number(role) as UserRole;
+    const res = await switchMockRole(targetRole);
     const mappedRole = ROLE_MAP[res.data.role];
     if (!mappedRole) {
-      clearAuthData();
       throw new Error(`Unknown role: ${res.data.role}`);
     }
     setUser({ ...res.data, role: mappedRole });

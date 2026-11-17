@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { FileUp, ClipboardList } from "lucide-react";
 import EventProcurementList from "@/features/event-procurements/components/event-procurement-list";
@@ -38,6 +38,14 @@ export default function EventProcurementPage() {
   const [activeTab, setActiveTab] = useState<"create" | "approve">(
     canCreate ? "create" : "approve",
   );
+
+  useEffect(() => {
+    if (!canCreate && activeTab === "create") {
+      setActiveTab("approve");
+    } else if (!canApprove && !canView && activeTab === "approve") {
+      setActiveTab("create");
+    }
+  }, [canCreate, canApprove, canView, activeTab]);
 
   const handleAddItem = (item: ProcurementItem) => {
     setItems([...items, item]);

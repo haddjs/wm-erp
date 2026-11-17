@@ -204,7 +204,7 @@ const TransactionTable = ({ expenses, branches }: Props) => {
           </div>
         )}
       </div>
-      <Link href="/reports">
+      <Link href="/purchase-records">
         <h2 className="text-sm text-center font-semibold mt-4 underline cursor-pointer hover:text-muted-foreground">
           View All Transactions →
         </h2>
